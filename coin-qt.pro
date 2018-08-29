@@ -1,14 +1,16 @@
 TEMPLATE = app
-TARGET = litecoin-qt
-macx:TARGET = "Litecoin-Qt"
-VERSION = 0.8.7.5
+TARGET = TosCoin-qt
+macx:TARGET = "TosCoin-Qt"
+VERSION = 1.0.0.1
 INCLUDEPATH += src src/json src/qt
-QT += core gui network
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += network
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
-
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+lessThan(QT_MAJOR_VERSION, 5): CONFIG += static
+macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
+macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
 # for boost 1.37, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
 # for boost thread win32 with _win32 sufix
@@ -18,6 +20,25 @@ CONFIG += thread
 # Dependency library locations can be customized with:
 #    BOOST_INCLUDE_PATH, BOOST_LIB_PATH, BDB_INCLUDE_PATH,
 #    BDB_LIB_PATH, OPENSSL_INCLUDE_PATH and OPENSSL_LIB_PATH respectively
+win32 {
+windows:LIBS += -lshlwapi
+LIBS += $$join(BOOST_LIB_PATH,,-L,) $$join(BDB_LIB_PATH,,-L,) $$join(OPENSSL_LIB_PATH,,-L,) $$join(QRENCODE_LIB_PATH,,-L,)
+LIBS += -lssl -lcrypto -ldb_cxx$$BDB_LIB_SUFFIX
+windows:LIBS += -lws2_32 -lole32 -loleaut32 -luuid -lgdi32
+LIBS += -lboost_system-mgw46-mt-s-1_53 -lboost_filesystem-mgw46-mt-s-1_53 -lboost_program_options-mgw46-mt-s-1_53 -lboost_thread-mgw46-mt-s-1_53
+BOOST_LIB_SUFFIX=-mgw46-mt-s-1_53
+BOOST_INCLUDE_PATH=C:/deps/boost_1_53_0
+BOOST_LIB_PATH=C:/deps/boost_1_53_0/stage/lib
+BDB_INCLUDE_PATH=c:/deps/db-4.8.30.NC/build_unix
+BDB_LIB_PATH=c:/deps/db-4.8.30.NC/build_unix
+OPENSSL_INCLUDE_PATH=c:/deps/openssl-1.0.2d/include
+OPENSSL_LIB_PATH=c:/deps/openssl-1.0.2d
+MINIUPNPC_INCLUDE_PATH=C:/deps/
+MINIUPNPC_LIB_PATH=C:/deps/miniupnpc
+QRENCODE_INCLUDE_PATH=C:/deps/qrencode-3.4.4
+QRENCODE_LIB_PATH=C:/deps/qrencode-3.4.4/.libs
+}
+
 
 OBJECTS_DIR = build
 MOC_DIR = build
@@ -44,13 +65,11 @@ contains(RELEASE, 1) {
     # This can be enabled for Windows, when we switch to MinGW >= 4.4.x.
 }
 # for extra security (see: https://wiki.debian.org/Hardening): this flag is GCC compiler-specific
-QMAKE_CXXFLAGS += -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2
+QMAKE_CXXFLAGS *= -D_FORTIFY_SOURCE=2
 # for extra security on Windows: enable ASLR and DEP via GCC linker flags
 win32:QMAKE_LFLAGS *= -Wl,--dynamicbase -Wl,--nxcompat
 # on Windows: enable GCC large address aware linker flag
-win32:QMAKE_LFLAGS *= -Wl,--large-address-aware
-# i686-w64-mingw32
-win32:QMAKE_LFLAGS *= -static-libgcc -static-libstdc++
+win32:QMAKE_LFLAGS *= -Wl,--large-address-aware -static
 
 # use: qmake "USE_QRCODE=1"
 # libqrencode (http://fukuchi.org/works/qrencode/index.en.html) must be installed for support
@@ -105,14 +124,14 @@ INCLUDEPATH += src/leveldb/include src/leveldb/helpers
 LIBS += $$PWD/src/leveldb/libleveldb.a $$PWD/src/leveldb/libmemenv.a
 !win32 {
     # we use QMAKE_CXXFLAGS_RELEASE even without RELEASE=1 because we use RELEASE to indicate linking preferences not -O preferences
-    genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a
+    # genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a
 } else {
     # make an educated guess about what the ranlib command is called
     isEmpty(QMAKE_RANLIB) {
         QMAKE_RANLIB = $$replace(QMAKE_STRIP, strip, ranlib)
     }
     LIBS += -lshlwapi
-    genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libleveldb.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libmemenv.a
+    # genleveldb.commands = cd $$PWD/src/leveldb && CC=$$QMAKE_CC CXX=$$QMAKE_CXX TARGET_OS=OS_WINDOWS_CROSSCOMPILE $(MAKE) OPT=\"$$QMAKE_CXXFLAGS $$QMAKE_CXXFLAGS_RELEASE\" libleveldb.a libmemenv.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libleveldb.a && $$QMAKE_RANLIB $$PWD/src/leveldb/libmemenv.a
 }
 genleveldb.target = $$PWD/src/leveldb/libleveldb.a
 genleveldb.depends = FORCE
@@ -269,8 +288,8 @@ SOURCES += src/qt/bitcoin.cpp \
     src/qt/walletframe.cpp \
     src/bitcoinrpc.cpp \
     src/rpcdump.cpp \
-    src/rpcnet.cpp \
     src/rpcmining.cpp \
+    src/rpcnet.cpp \
     src/rpcwallet.cpp \
     src/rpcblockchain.cpp \
     src/rpcrawtransaction.cpp \
@@ -319,21 +338,11 @@ SOURCES += src/qt/test/test_main.cpp \
 HEADERS += src/qt/test/uritests.h
 DEPENDPATH += src/qt/test
 QT += testlib
-TARGET = litecoin-qt_test
+TARGET = bitcoin-qt_test
 DEFINES += BITCOIN_QT_TEST
   macx: CONFIG -= app_bundle
 }
 
-contains(USE_SSE2, 1) {
-DEFINES += USE_SSE2
-gccsse2.input  = SOURCES_SSE2
-gccsse2.output = $$PWD/build/${QMAKE_FILE_BASE}.o
-gccsse2.commands = $(CXX) -c $(CXXFLAGS) $(INCPATH) -o ${QMAKE_FILE_OUT} ${QMAKE_FILE_NAME} -msse2 -mstackrealign
-QMAKE_EXTRA_COMPILERS += gccsse2
-SOURCES_SSE2 += src/scrypt-sse2.cpp
-}
-
-# Todo: Remove this line when switching to Qt5, as that option was removed
 CODECFORTR = UTF-8
 
 # for lrelease/lupdate
@@ -358,6 +367,7 @@ OTHER_FILES += README.md \
     doc/*.rst \
     doc/*.txt \
     doc/*.md \
+    src/bitcoind.cpp \
     src/qt/res/bitcoin-qt.rc \
     src/test/*.cpp \
     src/test/*.h \
@@ -415,11 +425,11 @@ win32:!contains(MINGW_THREAD_BUGFIX, 0) {
     DEFINES += _FILE_OFFSET_BITS=64
 }
 
-macx:HEADERS += src/qt/macdockiconhandler.h src/qt/macnotificationhandler.h
-macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm src/qt/macnotificationhandler.mm
-macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit -framework CoreServices
+macx:HEADERS += src/qt/macdockiconhandler.h
+macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
+macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
-macx:ICON = src/qt/res/icons/litecoin.icns
+macx:ICON = src/qt/res/icons/bitcoin.icns
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread

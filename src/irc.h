@@ -1,18 +1,13 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
+// Copyright (c) 2011-2012 TosCoin Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITCOIN_INIT_H
-#define BITCOIN_INIT_H
+#ifndef BITCOIN_IRC_H
+#define BITCOIN_IRC_H
 
-#include "wallet.h"
+void ThreadIRCSeed();
 
-extern CWallet* pwalletMain;
-
-void StartShutdown();
-bool ShutdownRequested();
-void Shutdown();
-bool AppInit2(boost::thread_group& threadGroup);
-std::string HelpMessage();
+extern int nGotIRCAddresses;
 
 #endif

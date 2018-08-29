@@ -202,13 +202,16 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
         {
             uint256 hash;
             ssKey >> hash;
-            CWalletTx wtx;
+            CWalletTx& wtx = pwallet->mapWallet[hash];
             ssValue >> wtx;
             CValidationState state;
             if (wtx.CheckTransaction(state) && (wtx.GetHash() == hash) && state.IsValid())
                 wtx.BindWallet(pwallet);
             else
+            {
+                pwallet->mapWallet.erase(hash);
                 return false;
+            }
 
             // Undo serialize changes in 31600
             if (31404 <= wtx.fTimeReceivedIsTxTime && wtx.fTimeReceivedIsTxTime <= 31703)
@@ -233,7 +236,6 @@ ReadKeyValue(CWallet* pwallet, CDataStream& ssKey, CDataStream& ssValue,
             if (wtx.nOrderPos == -1)
                 fAnyUnordered = true;
 
-            pwallet->mapWallet[hash] = wtx;
             //// debug print
             //printf("LoadWallet  %s\n", wtx.GetHash().ToString().c_str());
             //printf(" %12"PRI64d"  %s  %s  %s\n",

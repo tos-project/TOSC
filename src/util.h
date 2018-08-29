@@ -8,7 +8,7 @@
 #include "uint256.h"
 
 #include <stdarg.h>
-
+// added stuff for gravity update
 #ifndef WIN32
 #include <sys/types.h>
 #include <sys/time.h>
@@ -32,8 +32,8 @@
 typedef long long  int64;
 typedef unsigned long long  uint64;
 
-static const int64 COIN = 100000000;
-static const int64 CENT = 1000000;
+static const int64 COIN = 1000000;
+static const int64 CENT = 10000;
 
 #define loop                for (;;)
 #define BEGIN(a)            ((char*)&(a))
@@ -227,11 +227,12 @@ int64 GetTime();
 void SetMockTime(int64 nMockTimeIn);
 int64 GetAdjustedTime();
 int64 GetTimeOffset();
+long hex2long(const char* hexString);
 std::string FormatFullVersion();
 std::string FormatSubVersion(const std::string& name, int nClientVersion, const std::vector<std::string>& comments);
 void AddTimeData(const CNetAddr& ip, int64 nTime);
 void runCommand(std::string strCommand);
-
+void DoubleToNumeratorDenominator(double inDouble, long long *outNumerator, long long *outDenominator); // For the difficulty update in GetNextWorkRequired
 
 
 

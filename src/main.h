@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2014 The Bitcoin developers
+// Copyright (c) 2009-2012 The Bitcoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef BITCOIN_MAIN_H
@@ -23,12 +23,14 @@ class CAddress;
 class CInv;
 class CNode;
 
+// gravity update
+
 struct CBlockIndexWorkComparator;
 
 /** The maximum allowed size for a serialized block, in bytes (network rule) */
 static const unsigned int MAX_BLOCK_SIZE = 1000000;                      // 1000KB block hard limit
 /** Obsolete: maximum size for mined blocks */
-static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/4;         // 250KB  block soft limit
+static const unsigned int MAX_BLOCK_SIZE_GEN = MAX_BLOCK_SIZE/2;         // 500KB  block soft limit
 /** Default for -blockmaxsize, maximum size for mined blocks **/
 static const unsigned int DEFAULT_BLOCK_MAX_SIZE = 250000;
 /** Default for -blockprioritysize, maximum space for zero/low-fee transactions **/
@@ -37,8 +39,10 @@ static const unsigned int DEFAULT_BLOCK_PRIORITY_SIZE = 17000;
 static const unsigned int MAX_STANDARD_TX_SIZE = 100000;
 /** The maximum allowed number of signature check operations in a block (network rule) */
 static const unsigned int MAX_BLOCK_SIGOPS = MAX_BLOCK_SIZE/50;
-/** Default for -maxorphantx, maximum number of orphan transactions kept in memory */
-static const unsigned int DEFAULT_MAX_ORPHAN_TRANSACTIONS = 25;
+/** The maximum number of orphan transactions kept in memory */
+static const unsigned int MAX_ORPHAN_TRANSACTIONS = MAX_BLOCK_SIZE/100;
+/** The maximum number of entries in an 'inv' protocol message */
+static const unsigned int MAX_INV_SZ = 50000;
 /** The maximum size of a blk?????.dat file (since 0.8) */
 static const unsigned int MAX_BLOCKFILE_SIZE = 0x8000000; // 128 MiB
 /** The pre-allocation chunk size for blk?????.dat files (since 0.8) */
@@ -48,18 +52,22 @@ static const unsigned int UNDOFILE_CHUNK_SIZE = 0x100000; // 1 MiB
 /** Fake height value used in CCoins to signify they are only in the memory pool (since 0.8) */
 static const unsigned int MEMPOOL_HEIGHT = 0x7FFFFFFF;
 /** Dust Soft Limit, allowed with additional fee per output */
-static const int64 DUST_SOFT_LIMIT = 100000; // 0.001 LTC
+static const int64 DUST_SOFT_LIMIT = 0.1 * COIN;
 /** Dust Hard Limit, ignored as wallet inputs (mininput default) */
-static const int64 DUST_HARD_LIMIT = 1000;   // 0.00001 LTC mininput
+static const int64 DUST_HARD_LIMIT = 0.001 * COIN;
 /** No amount larger than this (in satoshi) is valid */
-static const int64 MAX_MONEY = 84000000 * COIN;
+static const int64 MAX_MONEY = 6000000000 * COIN; // TosCoin: maximum of N coins (given some randomness), max transaction 10,000,000,000 for now
 inline bool MoneyRange(int64 nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-static const int COINBASE_MATURITY = 100;
+static const int COINBASE_MATURITY = 60;
 /** Threshold for nLockTime: below this value it is interpreted as block number, otherwise as UNIX timestamp. */
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
 /** Maximum number of script-checking threads allowed */
 static const int MAX_SCRIPTCHECK_THREADS = 16;
+
+static const int DIFF_FILTER_THRESHOLD_TESTNET =  30000;
+static const int DIFF_FILTER_THRESHOLD         = 30000;
+
 #ifdef USE_UPNP
 static const int fHaveUPnP = true;
 #else
@@ -448,6 +456,8 @@ public:
 
     std::string ToString() const
     {
+        if (scriptPubKey.size() < 6)
+            return "CTxOut(error)";
         return strprintf("CTxOut(nValue=%"PRI64d".%08"PRI64d", scriptPubKey=%s)", nValue / COIN, nValue % COIN, scriptPubKey.ToString().substr(0,30).c_str());
     }
 
@@ -510,11 +520,6 @@ public:
     uint256 GetHash() const
     {
         return SerializeHash(*this);
-    }
-
-    uint256 GetNormalizedHash() const
-    {
-        return SignatureHash(CScript(), *this, 0, SIGHASH_ALL);
     }
 
     bool IsFinal(int nBlockHeight=0, int64 nBlockTime=0) const
@@ -624,7 +629,7 @@ public:
     {
         // Large (in bytes) low-priority (new, small-coin) transactions
         // need a fee.
-        return dPriority > COIN * 576 / 250;
+        return dPriority > 2 * COIN * (60 * 24 / 1) / 250; // TosCoin: Priority cutoff is 2 TosCoin day / 250 bytes.
     }
 
 // Apply the effects of this transaction on the UTXO set represented by view
@@ -685,7 +690,7 @@ void UpdateCoins(const CTransaction& tx, CValidationState &state, CCoinsViewCach
     bool CheckTransaction(CValidationState &state) const;
 
     // Try to accept this transaction into the memory pool
-    bool AcceptToMemoryPool(CValidationState &state, bool fCheckInputs=true, bool fLimitFree = true, bool* pfMissingInputs=NULL, bool fRejectInsaneFee = false);
+    bool AcceptToMemoryPool(CValidationState &state, bool fCheckInputs=true, bool fLimitFree = true, bool* pfMissingInputs=NULL);
 
 protected:
     static const CTxOut &GetOutputFor(const CTxIn& input, CCoinsViewCache& mapInputs);
@@ -1122,8 +1127,6 @@ public:
 /** A transaction with a merkle branch linking it to the block chain. */
 class CMerkleTx : public CTransaction
 {
-private:
-    int GetDepthInMainChainINTERNAL(CBlockIndex* &pindexRet) const;
 public:
     uint256 hashBlock;
     std::vector<uint256> vMerkleBranch;
@@ -1162,14 +1165,9 @@ public:
 
 
     int SetMerkleBranch(const CBlock* pblock=NULL);
-
-    // Return depth of transaction in blockchain:
-    // -1  : not in blockchain, and not in memory pool (conflicted transaction)
-    //  0  : in memory pool, waiting to be included in a block
-    // >=1 : this many blocks deep in the main chain
     int GetDepthInMainChain(CBlockIndex* &pindexRet) const;
     int GetDepthInMainChain() const { CBlockIndex *pindexRet; return GetDepthInMainChain(pindexRet); }
-    bool IsInMainChain() const { CBlockIndex *pindexRet; return GetDepthInMainChainINTERNAL(pindexRet) > 0; }
+    bool IsInMainChain() const { return GetDepthInMainChain() > 0; }
     int GetBlocksToMaturity() const;
     bool AcceptToMemoryPool(bool fCheckInputs=true, bool fLimitFree=true);
 };
@@ -1779,7 +1777,7 @@ public:
         return true; // return CheckProofOfWork(GetBlockHash(), nBits);
     }
 
-    enum { nMedianTimeSpan=11 };
+    enum { nMedianTimeSpan=5 };
 
     int64 GetMedianTimePast() const
     {
@@ -2109,7 +2107,7 @@ public:
     std::map<uint256, CTransaction> mapTx;
     std::map<COutPoint, CInPoint> mapNextTx;
 
-    bool accept(CValidationState &state, CTransaction &tx, bool fCheckInputs, bool fLimitFree, bool* pfMissingInputs, bool fRejectInsaneFee = false);
+    bool accept(CValidationState &state, CTransaction &tx, bool fCheckInputs, bool fLimitFree, bool* pfMissingInputs);
     bool addUnchecked(const uint256& hash, const CTransaction &tx);
     bool remove(const CTransaction &tx, bool fRecursive = false);
     bool removeConflicts(const CTransaction &tx);
