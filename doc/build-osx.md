@@ -1,4 +1,4 @@
-Mac OS X litecoind build instructions
+Mac OS X TosCoind build instructions
 ====================================
 
 Authors
@@ -26,7 +26,7 @@ Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 Notes
 -----
 
-See `doc/readme-qt.rst` for instructions on building Litecoin-Qt, the
+See `doc/readme-qt.rst` for instructions on building TosCoin-Qt, the
 graphical user interface.
 
 Tested on OS X 10.5 through 10.8 on Intel processors only. PPC is not
@@ -72,14 +72,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db48@+no_java openssl miniupnpc
 
-### Building `litecoind`
+### Building `TosCoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:litecoin-project/litecoin.git litecoin
-        cd litecoin
+        git clone git@github.com:TosCoin-project/TosCoin.git TosCoin
+        cd TosCoin
 
-2.  Build litecoind:
+2.  Build TosCoind:
 
         cd src
         make -f makefile.osx
@@ -90,6 +90,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
 Instructions: HomeBrew
 ----------------------
+
+#### If compiling on Maverick (10.9) 
+
+You may find it easier to add the following steps to your process.  Since QT 4.8 isn't supported on Maverick (and until I can rewrite some of this code to take advantage of QT 5.2, installing QT through homebrew will make your life easier.
+
+      brew install qt
+      
+Once you have QT installed, you might need to relink the new applications so that they appear in your Application folder, but this is unnecessary for compiling TosCoin.  Now move on to installing the rest of the dependencies.
 
 #### Install dependencies using Homebrew
 
@@ -107,12 +115,12 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `litecoind`
+### Building `TosCoind`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone https://github.com/litecoin-project/litecoin.git
-        cd litecoin
+        git clone git@github.com:TosCoin-project/TosCoin.git TosCoin
+        cd TosCoin
 
 2.  Modify source in order to pick up the `openssl` library.
 
@@ -122,7 +130,11 @@ Rerunning "openssl version" should now return the correct version.
 
         patch -p1 < contrib/homebrew/makefile.osx.patch
 
-3.  Build litecoind:
+*Update*: The above #2 step has been rebuilt here. Now before you proceed to building TosCoind it is coing to be necessary to edit both the makefile and the TosCoin-qt.pro file.  You can find those edits in /contrib/homebrew/
+
+What you doing is fixing the locations of openssl, boost, and berkeley-db4 to the correct locations that homebrew installs.
+
+3.  Build TosCoind:
 
         cd src
         make -f makefile.osx
@@ -134,8 +146,8 @@ Rerunning "openssl version" should now return the correct version.
 Creating a release build
 ------------------------
 
-A litecoind binary is not included in the Litecoin-Qt.app bundle. You can ignore
-this section if you are building `litecoind` for your own use.
+A TosCoind binary is not included in the TosCoin-Qt.app bundle. You can ignore
+this section if you are building `TosCoind` for your own use.
 
 If you are building `litecond` for others, your build machine should be set up
 as follows for maximum compatibility:
@@ -156,30 +168,43 @@ As of December 2012, the `boost` port does not obey `macosx_deployment_target`.
 Download `http://gavinandresen-bitcoin.s3.amazonaws.com/boost_macports_fix.zip`
 for a fix. Some ports also seem to obey either `build_arch` or
 `macosx_deployment_target`, but not both at the same time. For example, building
-on an OS X 10.6 64-bit machine fails. Official release builds of Litecoin-Qt are
+on an OS X 10.6 64-bit machine fails. Official release builds of TosCoin-Qt are
 compiled on an OS X 10.6 32-bit machine to workaround that problem.
 
-Once dependencies are compiled, creating `Litecoin-Qt.app` is easy:
+Once dependencies are compiled, creating `TosCoin-Qt.app` is easy:
 
     make -f Makefile.osx RELEASE=1
+
+QT Release
+----------
+
+First, run this command:
+
+     qmake "USE_UPNP=1"
+
+Now you can run the command:
+
+     make -f Makefile
+     
+This will make the QT version of the wallet WITHOUT having to use QT Creator (since we also installed the QT components using homebrew earlier).
 
 Running
 -------
 
-It's now available at `./litecoind`, provided that you are still in the `src`
+It's now available at `./TosCoind`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./litecoind` to get the filename where it should be put, or just try these
+Run `./TosCoind` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=litecoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/Litecoin/litecoin.conf"
+    echo -e "rpcuser=TosCoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/TosCoin/TosCoin.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/TosCoin/TosCoin.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.
 
 Other commands:
 
-    ./litecoind --help  # for a list of command-line options.
-    ./litecoind -daemon # to start the litecoin daemon.
-    ./litecoind help    # When the daemon is running, to get a list of RPC commands
+    ./TosCoind --help  # for a list of command-line options.
+    ./TosCoind -daemon # to start the TosCoin daemon.
+    ./TosCoind help    # When the daemon is running, to get a list of RPC commands
