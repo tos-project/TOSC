@@ -1,7 +1,3 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
-
 #include "bitcoinaddressvalidator.h"
 
 /* Base58 characters are:
@@ -57,16 +53,12 @@ QValidator::State BitcoinAddressValidator::validate(QString &input, int &pos) co
     for(int idx=0; idx<input.size(); ++idx)
     {
         int ch = input.at(idx).unicode();
+        int zeroCh = input.at(0).unicode();
 
-        if(((ch >= '0' && ch<='9') ||
-           (ch >= 'a' && ch<='z') ||
-           (ch >= 'A' && ch<='Z')) &&
-           ch != 'l' && ch != 'I' && ch != '0' && ch != 'O')
-        {
+        if(((ch >= '0' && ch<='9') || (ch >= 'a' && ch<='z') || (ch >= 'A' && ch<='Z')) && zeroCh == 'T' && ch != 'l' && ch != 'I' && ch != '0' && ch != 'O'){
             // Alphanumeric and not a 'forbidden' character
         }
-        else
-        {
+        else{
             state = QValidator::Invalid;
         }
     }
