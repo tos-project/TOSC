@@ -33,3 +33,4 @@ build
 
 !src/leveldb*/Makefile
 IGNOREME
+src/qt/res/images/Thumbs.db
