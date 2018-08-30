@@ -2,36 +2,58 @@
 <!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
 <plist version="0.9">
 <dict>
+	<key>LSMinimumSystemVersion</key>
+ 	<string>10.9.0</string>
+
+  	<key>LSArchitecturePriority</key>
+  	<array>
+    	<string>x86_64</string>
+  	</array>
+
 	<key>CFBundleIconFile</key>
-	<string>bitcoin.icns</string>
+	<string>toscoin.icns</string>
+
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	
 	<key>CFBundleGetInfoString</key>
-	<string>$VERSION, Copyright © 2009-$YEAR The Bitcoin developers</string>
+	<string>1.1.0, Copyright © 2017-2018 The T.OS Deveopers</string>
+	
 	<key>CFBundleShortVersionString</key>
-	<string>$VERSION</string>
+	<string>1.1.0</string>
+	
 	<key>CFBundleVersion</key>
-	<string>$VERSION</string>
+	<string>1.1.0</string>
+	
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	
 	<key>CFBundleExecutable</key>
-	<string>TosCoin-Qt</string>
+	<string>TOS-Qt</string>
+
+	<key>CFBundleName</key>
+	<string>TOS-Qt</string>
+	
 	<key>CFBundleIdentifier</key>
-	<string>org.TosCoin.TosCoin-Qt</string>
-        <key>CFBundleURLTypes</key>
+	<string>org.TOS.TOS-Qt</string>
+    
+    <key>CFBundleURLTypes</key>
         <array>
           <dict>
             <key>CFBundleTypeRole</key>
             <string>Editor</string>
             <key>CFBundleURLName</key>
-            <string>org.TosCoin.TosCoinPayment</string>
+            <string>org.TOS.TOSPayment</string>
             <key>CFBundleURLSchemes</key>
             <array>
-              <string>TosCoin</string>
+              <string>TOS</string>
             </array>
           </dict>
         </array>
 	<key>NSHighResolutionCapable</key>
 	<true/>
+
+	 <key>LSApplicationCategoryType</key>
+    <string>public.app-category.finance</string>
 </dict>
 </plist>
