@@ -22,7 +22,7 @@
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;nrequired&gt; &lt;'["key","key"]'&gt; [account]</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Add a nrequired-to-sign multisignature address to the wallet. Each key is a toscoin address or hex-encoded public key. If [account] is specified, assign address to [account]. Returns a string containing the address.</span></p>
+<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Add a nrequired-to-sign multisignature address to the wallet. Each key is a TOS address or hex-encoded public key. If [account] is specified, assign address to [account]. Returns a string containing the address.</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -101,10 +101,10 @@
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">dumpprivkey</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt;</span></p>
+<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Reveals the private key corresponding to &lt;toscoinaddress&gt;</span></p>
+<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Reveals the private key corresponding to &lt;TOSaddress&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Y</span></p>
@@ -129,7 +129,7 @@
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">getaccount</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt;</span></p>
+<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns the account associated with the given address.</span></p>
@@ -146,7 +146,7 @@
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;account&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns the current toscoin address for receiving payments to this account. If &lt;account&gt; does not exist, it will be created along with an associated new address that will be returned.</span></p>
+<p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns the current TOS address for receiving payments to this account. If &lt;account&gt; does not exist, it will be created along with an associated new address that will be returned.</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 12.0pt 0cm 12.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -289,7 +289,7 @@
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">&nbsp;</td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns true or false whether toscoind is currently generating hashes</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns true or false whether TOSd is currently generating hashes</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -355,7 +355,7 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">[account]</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns a new toscoin address for receiving payments. If [account] is specified payments received with the address will be credited to [account].</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns a new TOS address for receiving payments. If [account] is specified payments received with the address will be credited to [account].</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -418,10 +418,10 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">getreceivedbyaddress</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt; height: 29.7pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt; [minconf=1]</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt; [minconf=1]</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt; height: 29.7pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns the amount received by &lt;toscoinaddress&gt; in transactions with at least [minconf] confirmations. It correctly handles the case where someone has sent to the address in multiple transactions. Keep in mind that addresses are only ever used for receiving transactions. Works only for addresses in the local wallet, external addresses will always show 0.</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Returns the amount received by &lt;TOSaddress&gt; in transactions with at least [minconf] confirmations. It correctly handles the case where someone has sent to the address in multiple transactions. Keep in mind that addresses are only ever used for receiving transactions. Works only for addresses in the local wallet, external addresses will always show 0.</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt; height: 29.7pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -528,7 +528,7 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">importprivkey</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinprivkey&gt; [label] [rescan=true]</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSprivkey&gt; [label] [rescan=true]</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: 1.2pt; margin-left: 38.4pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Adds a private key (as returned by dumpprivkey) to your wallet. This may take a while, as a&nbsp;</span><u><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #0b0080;">rescan</span></u><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&nbsp;is done, looking for existing transactions.&nbsp;<strong>Optional [rescan] parameter added in 0.8.0.</strong>&nbsp;Note: There's no need to import public key, as in&nbsp;</span><u><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #0b0080;">ECDSA</span></u><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&nbsp;(unlike RSA) this can be computed from private key.</span></p>
@@ -620,7 +620,7 @@
 <p style="margin-bottom: 1.2pt; margin-left: 19.2pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">"account"&nbsp;: the account of the receiving address</span></p>
 <p style="margin-bottom: 1.2pt; margin-left: 19.2pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">"amount"&nbsp;: total amount received by the address</span></p>
 <p style="margin-bottom: 1.2pt; margin-left: 19.2pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">"confirmations"&nbsp;: number of confirmations of the most recent transaction included</span></p>
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">To get a list of accounts on the system, execute toscoind listreceivedbyaddress 0 true</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">To get a list of accounts on the system, execute TOSd listreceivedbyaddress 0 true</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -699,7 +699,7 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">sendfrom</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;fromaccount&gt; &lt;totoscoinaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;fromaccount&gt; &lt;toTOSaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all; margin: 6.0pt 0cm 6.0pt 0cm;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;amount&gt; is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object).</span></p>
@@ -741,7 +741,7 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">sendtoaddress</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt; &lt;amount&gt; [comment] [comment-to]</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt; &lt;amount&gt; [comment] [comment-to]</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;amount&gt; is a real and is rounded to 8 decimal places. Returns the transaction ID &lt;txid&gt; if successful.</span></p>
@@ -755,7 +755,7 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">setaccount</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt; &lt;account&gt;</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt; &lt;account&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account.</span></p>
@@ -807,7 +807,7 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">signmessage</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt; &lt;message&gt;</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt; &lt;message&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Sign a message with the private key of an address.</span></p>
@@ -836,7 +836,7 @@
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">&nbsp;</td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Stop toscoin server.</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Stop TOS server.</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -861,10 +861,10 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">validateaddress</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt;</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Return information about &lt;toscoinaddress&gt;.</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Return information about &lt;TOSaddress&gt;.</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">N</span></p>
@@ -889,7 +889,7 @@
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 12.0pt; font-family: 'Courier New'; color: black; border: solid #EAECF0 1.0pt; padding: 1.0pt; background: #F8F9FA;">verifymessage</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
-<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;toscoinaddress&gt; &lt;signature&gt; &lt;message&gt;</span></p>
+<p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">&lt;TOSaddress&gt; &lt;signature&gt; &lt;message&gt;</span></p>
 </td>
 <td style="border-top: none; border-left: none; border-bottom: solid #A2A9B1 1.0pt; border-right: solid #A2A9B1 1.0pt; padding: 2.4pt 4.8pt 2.4pt 4.8pt;">
 <p style="margin-bottom: .0001pt; text-align: left; line-height: normal; text-autospace: ideograph-numeric ideograph-other; word-break: keep-all;"><span style="font-size: 10.5pt; font-family: 'Arial',sans-serif; color: #222222;">Verify a signed message.</span></p>
