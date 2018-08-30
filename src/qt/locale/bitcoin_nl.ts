@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About TosCoin</source>
-        <translation>Over TosCoin</translation>
+        <source>About TOS</source>
+        <translation>Over TOS</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;TosCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;TosCoin&lt;/b&gt; versie</translation>
+        <source>&lt;b&gt;TOS&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;TOS&lt;/b&gt; versie</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -34,8 +34,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+0"/>
-        <source>The TosCoin developers</source>
-        <translation>De TosCoin-ontwikkelaars</translation>
+        <source>The T.OS Deveopers</source>
+        <translation>De TOS-ontwikkelaars</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your TosCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Dit zijn uw TosCoinadressen om betalingen mee te ontvangen. U kunt er voor kiezen om een uniek adres aan te maken voor elke afzender. Op deze manier kunt u bijhouden wie al aan u betaald heeft.</translation>
+        <source>These are your TOS addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Dit zijn uw TOSadressen om betalingen mee te ontvangen. U kunt er voor kiezen om een uniek adres aan te maken voor elke afzender. Op deze manier kunt u bijhouden wie al aan u betaald heeft.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,8 +82,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a TosCoin address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald TosCoinadres bezit</translation>
+        <source>Sign a message to prove you own a TOS address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald TOSadres bezit</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -107,8 +107,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified TosCoin address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde TosCoinadres het bericht heeft ondertekend.</translation>
+        <source>Verify a message to ensure it was signed with a specified TOS address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde TOSadres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,8 +122,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your TosCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit zijn uw TosCoinadressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw TosCoins verzendt.</translation>
+        <source>These are your TOS addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit zijn uw TOSadressen om betalingen mee te verzenden. Check altijd het bedrag en het ontvangende adres voordat u uw TOSs verzendt.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -248,8 +248,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TosCoinS&lt;/b&gt;!</source>
-        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW TosCoinS VERLIEZEN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TOSS&lt;/b&gt;!</source>
+        <translation>Waarschuwing: Als u uw portemonnee versleutelt en uw wachtwoord vergeet, zult u &lt;b&gt;AL UW TOSS VERLIEZEN&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-56"/>
-        <source>TosCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TosCoins from being stolen by malware infecting your computer.</source>
-        <translation>TosCoin zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw TosCoins stelen.</translation>
+        <source>TOS will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TOSs from being stolen by malware infecting your computer.</source>
+        <translation>TOS zal nu afsluiten om het versleutelingsproces te voltooien. Onthoud dat het versleutelen van uw portemonnee u niet volledig kan beschermen: Malware kan uw computer infecteren en uw TOSs stelen.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -374,8 +374,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about TosCoin</source>
-        <translation>Laat informatie zien over TosCoin</translation>
+        <source>Show information about TOS</source>
+        <translation>Laat informatie zien over TOS</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a TosCoin address</source>
-        <translation>Verstuur munten naar een TosCoinadres</translation>
+        <source>Send coins to a TOS address</source>
+        <translation>Verstuur munten naar een TOSadres</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for TosCoin</source>
-        <translation>Wijzig instellingen van TosCoin</translation>
+        <source>Modify configuration options for TOS</source>
+        <translation>Wijzig instellingen van TOS</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>TosCoin</source>
-        <translation>TosCoin</translation>
+        <source>TOS</source>
+        <translation>TOS</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About TosCoin</source>
-        <translation>&amp;Over TosCoin</translation>
+        <source>&amp;About TOS</source>
+        <translation>&amp;Over TOS</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your TosCoin addresses to prove you own them</source>
-        <translation>Onderteken berichten met uw TosCoinadressen om te bewijzen dat u deze adressen bezit</translation>
+        <source>Sign messages with your TOS addresses to prove you own them</source>
+        <translation>Onderteken berichten met uw TOSadressen om te bewijzen dat u deze adressen bezit</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified TosCoin addresses</source>
-        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde TosCoinadressen</translation>
+        <source>Verify messages to ensure they were signed with specified TOS addresses</source>
+        <translation>Verifiëer handtekeningen om zeker te zijn dat de berichten zijn ondertekend met de gespecificeerde TOSadressen</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     </message>
     <message>
         <location line="+47"/>
-        <source>TosCoin client</source>
-        <translation>TosCoin client</translation>
+        <source>TOS client</source>
+        <translation>TOS client</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to TosCoin network</source>
-        <translation><numerusform>%n actieve connectie naar TosCoinnetwerk</numerusform><numerusform>%n actieve connecties naar TosCoinnetwerk</numerusform></translation>
+        <source>%n active connection(s) to TOS network</source>
+        <translation><numerusform>%n actieve connectie naar TOSnetwerk</numerusform><numerusform>%n actieve connecties naar TOSnetwerk</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -607,7 +607,7 @@ Dit product bevat software ontwikkeld door het OpenSSL Project voor gebruik in d
     <message>
         <location line="+70"/>
         <source>This transaction is over the size limit. You can still send it for a fee of %1, which goes to the nodes that process your transaction and helps to support the network. Do you want to pay the fee?</source>
-        <translation>Deze transactie overschrijdt de groottelimiet. Om de transactie alsnog te versturen kunt u transactiekosten betalen van %1. Deze transactiekosten gaan naar de nodes die uw transactie verwerken en het helpt op deze manier bij het ondersteunen van het TosCoinnetwerk. Wilt u de transactiekosten betalen?</translation>
+        <translation>Deze transactie overschrijdt de groottelimiet. Om de transactie alsnog te versturen kunt u transactiekosten betalen van %1. Deze transactiekosten gaan naar de nodes die uw transactie verwerken en het helpt op deze manier bij het ondersteunen van het TOSnetwerk. Wilt u de transactiekosten betalen?</translation>
     </message>
     <message>
         <location line="-140"/>
@@ -656,8 +656,8 @@ Adres: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid TosCoin address or malformed URI parameters.</source>
-        <translation>URI kan niet worden geïnterpreteerd. Dit kan komen door een ongeldig TosCoinadres of misvormde URI-parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid TOS address or malformed URI parameters.</source>
+        <translation>URI kan niet worden geïnterpreteerd. Dit kan komen door een ongeldig TOSadres of misvormde URI-parameters.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,8 +671,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. TosCoin can no longer continue safely and will quit.</source>
-        <translation>Er is een fatale fout opgetreden. TosCoin kan niet meer veilig doorgaan en zal nu afgesloten worden.</translation>
+        <source>A fatal error occurred. TOS can no longer continue safely and will quit.</source>
+        <translation>Er is een fatale fout opgetreden. TOS kan niet meer veilig doorgaan en zal nu afgesloten worden.</translation>
     </message>
 </context>
 <context>
@@ -737,8 +737,8 @@ Adres: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid TosCoin address.</source>
-        <translation>Het opgegeven adres &quot;%1&quot; is een ongeldig TosCoinadres</translation>
+        <source>The entered address &quot;%1&quot; is not a valid TOS address.</source>
+        <translation>Het opgegeven adres &quot;%1&quot; is een ongeldig TOSadres</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -756,8 +756,8 @@ Adres: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>TosCoin-Qt</source>
-        <translation>TosCoin-Qt</translation>
+        <source>TOS-Qt</source>
+        <translation>TOS-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -819,13 +819,13 @@ Adres: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start TosCoin after logging in to the system.</source>
-        <translation>Start TosCoin automatisch na inloggen in het systeem</translation>
+        <source>Automatically start TOS after logging in to the system.</source>
+        <translation>Start TOS automatisch na inloggen in het systeem</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start TosCoin on system login</source>
-        <translation>Start &amp;TosCoin bij het inloggen in het systeem</translation>
+        <source>&amp;Start TOS on system login</source>
+        <translation>Start &amp;TOS bij het inloggen in het systeem</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -844,8 +844,8 @@ Adres: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the TosCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Open de TosCoin-poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
+        <source>Automatically open the TOS client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Open de TOS-poort automatisch op de router. Dit werkt alleen als de router UPnP ondersteunt en het aanstaat.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -854,8 +854,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the TosCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Verbind met het TosCoin-netwerk via een SOCKS-proxy (bijv. wanneer u via Tor wilt verbinden)</translation>
+        <source>Connect to the TOS network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Verbind met het TOS-netwerk via een SOCKS-proxy (bijv. wanneer u via Tor wilt verbinden)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -929,8 +929,8 @@ Adres: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting TosCoin.</source>
-        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling zal pas van kracht worden nadat TosCoin herstart wordt.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting TOS.</source>
+        <translation>De taal van de gebruikersinterface kan hier ingesteld worden. Deze instelling zal pas van kracht worden nadat TOS herstart wordt.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -944,8 +944,8 @@ Adres: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show TosCoin addresses in the transaction list or not.</source>
-        <translation>Of TosCoinadressen getoond worden in de transactielijst</translation>
+        <source>Whether to show TOS addresses in the transaction list or not.</source>
+        <translation>Of TOSadressen getoond worden in de transactielijst</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -996,8 +996,8 @@ Adres: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting TosCoin.</source>
-        <translation>Deze instelling zal pas van kracht worden na het herstarten van TosCoin.</translation>
+        <source>This setting will take effect after restarting TOS.</source>
+        <translation>Deze instelling zal pas van kracht worden na het herstarten van TOS.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1015,8 +1015,8 @@ Adres: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TosCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automaticsh met het TosCoinnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TOS network after a connection is established, but this process has not completed yet.</source>
+        <translation>De weergegeven informatie kan verouderd zijn. Uw portemonnee synchroniseert automaticsh met het TOSnetwerk nadat een verbinding is gelegd, maar dit proces is nog niet voltooid.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1069,8 +1069,8 @@ Adres: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start TosCoin: click-to-pay handler</source>
-        <translation>Kan TosCoin niet starten: click-to-pay handler</translation>
+        <source>Cannot start TOS: click-to-pay handler</source>
+        <translation>Kan TOS niet starten: click-to-pay handler</translation>
     </message>
 </context>
 <context>
@@ -1219,8 +1219,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the TosCoin-Qt help message to get a list with possible TosCoin command-line options.</source>
-        <translation>Toon het TosCoinQt-hulpbericht voor een lijst met mogelijke TosCoin commandoregel-opties.</translation>
+        <source>Show the TOS-Qt help message to get a list with possible TOS command-line options.</source>
+        <translation>Toon het TOSQt-hulpbericht voor een lijst met mogelijke TOS commandoregel-opties.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1239,13 +1239,13 @@ Adres: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>TosCoin - Debug window</source>
-        <translation>TosCoin-debugscherm</translation>
+        <source>TOS - Debug window</source>
+        <translation>TOS-debugscherm</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>TosCoin Core</source>
-        <translation>TosCoin Kern</translation>
+        <source>TOS Core</source>
+        <translation>TOS Kern</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1254,8 +1254,8 @@ Adres: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the TosCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open het TosCoindebug-logbestand van de huidige datamap. Dit kan een aantal seconden duren voor grote logbestanden.</translation>
+        <source>Open the TOS debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open het TOSdebug-logbestand van de huidige datamap. Dit kan een aantal seconden duren voor grote logbestanden.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1264,8 +1264,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the TosCoin RPC console.</source>
-        <translation>Welkom bij de TosCoin RPC-console.</translation>
+        <source>Welcome to the TOS RPC console.</source>
+        <translation>Welkom bij de TOS RPC-console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1448,8 +1448,8 @@ Adres: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a TosCoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Vul een TosCoinadres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a TOS address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Vul een TOSadres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
 <context>
@@ -1513,8 +1513,8 @@ Adres: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this TosCoin address</source>
-        <translation>Onderteken een bericht om te bewijzen dat u een bepaald TosCoinadres bezit</translation>
+        <source>Sign the message to prove you own this TOS address</source>
+        <translation>Onderteken een bericht om te bewijzen dat u een bepaald TOSadres bezit</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1549,8 +1549,8 @@ Adres: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified TosCoin address</source>
-        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde TosCoinadres het bericht heeft ondertekend.</translation>
+        <source>Verify the message to ensure it was signed with the specified TOS address</source>
+        <translation>Controleer een bericht om te verifiëren dat het gespecificeerde TOSadres het bericht heeft ondertekend.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1565,8 +1565,8 @@ Adres: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a TosCoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Vul een TosCoinadres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a TOS address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Vul een TOSadres in (bijv. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1575,8 +1575,8 @@ Adres: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter TosCoin signature</source>
-        <translation>Voer TosCoin-handtekening in</translation>
+        <source>Enter TOS signature</source>
+        <translation>Voer TOS-handtekening in</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1649,8 +1649,8 @@ Adres: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The TosCoin developers</source>
-        <translation>De TosCoin-ontwikkelaars</translation>
+        <source>The T.OS Deveopers</source>
+        <translation>De TOS-ontwikkelaars</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2187,8 +2187,8 @@ Adres: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>TosCoin version</source>
-        <translation>TosCoinversie</translation>
+        <source>TOS version</source>
+        <translation>TOSversie</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2197,8 +2197,8 @@ Adres: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or TosCoind</source>
-        <translation>Stuur commando naar -server of TosCoind</translation>
+        <source>Send command to -server or TOSd</source>
+        <translation>Stuur commando naar -server of TOSd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2217,14 +2217,14 @@ Adres: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: TosCoin.conf)</source>
-        <translation>Specificeer configuratiebestand (standaard: TosCoin.conf)
+        <source>Specify configuration file (default: TOS.conf)</source>
+        <translation>Specificeer configuratiebestand (standaard: TOS.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: TosCoind.pid)</source>
-        <translation>Specificeer pid-bestand (standaard: TosCoind.pid)
+        <source>Specify pid file (default: TOSd.pid)</source>
+        <translation>Specificeer pid-bestand (standaard: TOSd.pid)
 </translation>
     </message>
     <message>
@@ -2302,23 +2302,23 @@ Adres: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=TosCoinrpc
+rpcuser=TOSrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;TOS Alert&quot; admin@foo.com
 </source>
         <translation>%s, u moet een RPC-wachtwoord instellen in het configuratiebestand: %s
 U wordt aangeraden het volgende willekeurige wachtwoord te gebruiken:
-rpcuser=TosCoinrpc
+rpcuser=TOSrpc
 rpcpassword=%s
 (u hoeft dit wachtwoord niet te onthouden)
 De gebruikersnaam en wachtwoord mogen niet hetzelfde zijn.
 Als het bestand niet bestaat, make hem dan aan met leesrechten voor enkel de eigenaar.
 Het is ook aan te bevelen &quot;alertnotify&quot; in te stellen zodat u op de hoogte gesteld wordt van problemen;
-for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.com</translation>
+for example: alertnotify=echo %%s | mail -s &quot;TOS Alert&quot; admin@foo.com</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2332,8 +2332,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. TosCoin is probably already running.</source>
-        <translation>Kan geen lock op de datamap %s verkrijgen. TosCoin draait vermoedelijk reeds.</translation>
+        <source>Cannot obtain a lock on data directory %s. T.OS Core is probably already running.</source>
+        <translation>Kan geen lock op de datamap %s verkrijgen. TOS draait vermoedelijk reeds.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2377,8 +2377,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong TosCoin will not work properly.</source>
-        <translation>Waarschuwing: Controleer dat de datum en tijd op uw computer correct zijn ingesteld. Als uw klok fout staat zal TosCoin niet correct werken.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong TOS will not work properly.</source>
+        <translation>Waarschuwing: Controleer dat de datum en tijd op uw computer correct zijn ingesteld. Als uw klok fout staat zal TOS niet correct werken.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2627,8 +2627,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the TosCoin Wiki for SSL setup instructions)</source>
-        <translation>SSL-opties: (zie de TosCoin wiki voor SSL-instructies)</translation>
+        <source>SSL options: (see the TOS Wiki for SSL setup instructions)</source>
+        <translation>SSL-opties: (zie de TOS wiki voor SSL-instructies)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2817,13 +2817,13 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of TosCoin</source>
-        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van TosCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of TOS</source>
+        <translation>Fout bij laden wallet.dat: Portemonnee vereist een nieuwere versie van TOS</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart TosCoin to complete</source>
-        <translation>Portemonnee moest herschreven worden: Herstart TosCoin om te voltooien</translation>
+        <source>Wallet needed to be rewritten: restart TOS to complete</source>
+        <translation>Portemonnee moest herschreven worden: Herstart TOS om te voltooien</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2882,8 +2882,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. TosCoin is probably already running.</source>
-        <translation>Niet in staat om aan %s te binden op deze computer. TosCoin draait vermoedelijk reeds.</translation>
+        <source>Unable to bind to %s on this computer. T.OS Core is probably already running.</source>
+        <translation>Niet in staat om aan %s te binden op deze computer. TOS draait vermoedelijk reeds.</translation>
     </message>
     <message>
         <location line="+64"/>

@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About TosCoin</source>
-        <translation>Sobre TosCoin</translation>
+        <source>About TOS</source>
+        <translation>Sobre TOS</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;TosCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;TosCoin&lt;/b&gt; versió</translation>
+        <source>&lt;b&gt;TOS&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;TOS&lt;/b&gt; versió</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -29,7 +29,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The TosCoin developers</source>
+        <source>The T.OS Deveopers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -62,8 +62,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your TosCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Aquestes són les teves adreces TosCoin per a rebre pagaments. Pot interesar-te proveïr diferents adreces a cadascun dels enviadors així pots identificar qui et va pagant.</translation>
+        <source>These are your TOS addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Aquestes són les teves adreces TOS per a rebre pagaments. Pot interesar-te proveïr diferents adreces a cadascun dels enviadors així pots identificar qui et va pagant.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -77,8 +77,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a TosCoin address</source>
-        <translation>Signa el missatge per provar que ets propietari de l&apos;adreça TosCoin</translation>
+        <source>Sign a message to prove you own a TOS address</source>
+        <translation>Signa el missatge per provar que ets propietari de l&apos;adreça TOS</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -102,8 +102,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified TosCoin address</source>
-        <translation>Verificar un missatge per asegurar-se que ha estat signat amb una adreça TosCoin específica</translation>
+        <source>Verify a message to ensure it was signed with a specified TOS address</source>
+        <translation>Verificar un missatge per asegurar-se que ha estat signat amb una adreça TOS específica</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -117,8 +117,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your TosCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Aquestes són la seva adreça de TosCoin per enviar els pagaments. Sempre revisi la quantitat i l&apos;adreça del destinatari abans transferència de monedes.</translation>
+        <source>These are your TOS addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Aquestes són la seva adreça de TOS per enviar els pagaments. Sempre revisi la quantitat i l&apos;adreça del destinatari abans transferència de monedes.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -243,8 +243,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TosCoinS&lt;/b&gt;!</source>
-        <translation>Advertència: Si encripteu el vostre moneder i perdeu la constrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES TosCoinS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR TOSS&lt;/b&gt;!</source>
+        <translation>Advertència: Si encripteu el vostre moneder i perdeu la constrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES TOSS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -270,8 +270,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>TosCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TosCoins from being stolen by malware infecting your computer.</source>
-        <translation>TosCoin es tancarà ara per acabar el procés d&apos;encriptació. Recorda que encriptar el teu moneder no protegeix completament els teus TosCoins de ser robades per programari maliciós instal·lat al teu ordinador.</translation>
+        <source>TOS will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your TOSs from being stolen by malware infecting your computer.</source>
+        <translation>TOS es tancarà ara per acabar el procés d&apos;encriptació. Recorda que encriptar el teu moneder no protegeix completament els teus TOSs de ser robades per programari maliciós instal·lat al teu ordinador.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -369,8 +369,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about TosCoin</source>
-        <translation>Mostra informació sobre TosCoin</translation>
+        <source>Show information about TOS</source>
+        <translation>Mostra informació sobre TOS</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -414,13 +414,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a TosCoin address</source>
-        <translation>Enviar monedes a una adreça TosCoin</translation>
+        <source>Send coins to a TOS address</source>
+        <translation>Enviar monedes a una adreça TOS</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for TosCoin</source>
-        <translation>Modificar les opcions de configuració per TosCoin</translation>
+        <source>Modify configuration options for TOS</source>
+        <translation>Modificar les opcions de configuració per TOS</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -450,8 +450,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>TosCoin</source>
-        <translation>TosCoin</translation>
+        <source>TOS</source>
+        <translation>TOS</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -475,8 +475,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About TosCoin</source>
-        <translation>&amp;Sobre TosCoin</translation>
+        <source>&amp;About TOS</source>
+        <translation>&amp;Sobre TOS</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -495,13 +495,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your TosCoin addresses to prove you own them</source>
-        <translation>Signa el missatges amb la seva adreça de TosCoin per provar que les poseeixes</translation>
+        <source>Sign messages with your TOS addresses to prove you own them</source>
+        <translation>Signa el missatges amb la seva adreça de TOS per provar que les poseeixes</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified TosCoin addresses</source>
-        <translation>Verificar els missatges per assegurar-te que han estat signades amb una adreça TosCoin específica.</translation>
+        <source>Verify messages to ensure they were signed with specified TOS addresses</source>
+        <translation>Verificar els missatges per assegurar-te que han estat signades amb una adreça TOS específica.</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -531,13 +531,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>TosCoin client</source>
-        <translation>Client TosCoin</translation>
+        <source>TOS client</source>
+        <translation>Client TOS</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to TosCoin network</source>
-        <translation><numerusform>%n connexió activa a la xarxa TosCoin</numerusform><numerusform>%n connexions actives a la xarxa TosCoin</numerusform></translation>
+        <source>%n active connection(s) to TOS network</source>
+        <translation><numerusform>%n connexió activa a la xarxa TOS</numerusform><numerusform>%n connexions actives a la xarxa TOS</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -647,8 +647,8 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid TosCoin address or malformed URI parameters.</source>
-        <translation>la URI no pot ser processada! Això es pot ser causat per una adreça TosCoin invalida o paràmetres URI malformats.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid TOS address or malformed URI parameters.</source>
+        <translation>la URI no pot ser processada! Això es pot ser causat per una adreça TOS invalida o paràmetres URI malformats.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -662,8 +662,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. TosCoin can no longer continue safely and will quit.</source>
-        <translation>Ha tingut lloc un error fatal. TosCoin no pot continuar executant-se de manera segura i es tancará.</translation>
+        <source>A fatal error occurred. TOS can no longer continue safely and will quit.</source>
+        <translation>Ha tingut lloc un error fatal. TOS no pot continuar executant-se de manera segura i es tancará.</translation>
     </message>
 </context>
 <context>
@@ -728,8 +728,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid TosCoin address.</source>
-        <translation>L&apos;adreça introduida &quot;%1&quot; no és una adreça TosCoin valida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid TOS address.</source>
+        <translation>L&apos;adreça introduida &quot;%1&quot; no és una adreça TOS valida.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -747,8 +747,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>TosCoin-Qt</source>
-        <translation>TosCoin-Qt</translation>
+        <source>TOS-Qt</source>
+        <translation>TOS-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -810,13 +810,13 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start TosCoin after logging in to the system.</source>
-        <translation>Iniciar automàticament TosCoin després de l&apos;inici de sessió del sistema.</translation>
+        <source>Automatically start TOS after logging in to the system.</source>
+        <translation>Iniciar automàticament TOS després de l&apos;inici de sessió del sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start TosCoin on system login</source>
-        <translation>&amp;Iniciar TosCoin al inici de sessió del sistema.</translation>
+        <source>&amp;Start TOS on system login</source>
+        <translation>&amp;Iniciar TOS al inici de sessió del sistema.</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -835,8 +835,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the TosCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obrir el port del client de TosCoin al router de forma automàtica. Això només funciona quan el teu router implementa UPnP i l&apos;opció està activada.</translation>
+        <source>Automatically open the TOS client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obrir el port del client de TOS al router de forma automàtica. Això només funciona quan el teu router implementa UPnP i l&apos;opció està activada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -845,8 +845,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the TosCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connectar a la xarxa TosCoin a través de un SOCKS proxy (per exemple connectant a través de Tor).</translation>
+        <source>Connect to the TOS network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connectar a la xarxa TOS a través de un SOCKS proxy (per exemple connectant a través de Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -920,8 +920,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting TosCoin.</source>
-        <translation>Aquí pots definir el llenguatge de l&apos;aplicatiu. Aquesta configuració tindrà efecte un cop es reiniciï TosCoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting TOS.</source>
+        <translation>Aquí pots definir el llenguatge de l&apos;aplicatiu. Aquesta configuració tindrà efecte un cop es reiniciï TOS.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -935,8 +935,8 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show TosCoin addresses in the transaction list or not.</source>
-        <translation>Mostrar adreces TosCoin als llistats de transaccions o no.</translation>
+        <source>Whether to show TOS addresses in the transaction list or not.</source>
+        <translation>Mostrar adreces TOS als llistats de transaccions o no.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -987,8 +987,8 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting TosCoin.</source>
-        <translation>Aquesta configuració tindrà efecte un cop es reiniciï TosCoin.</translation>
+        <source>This setting will take effect after restarting TOS.</source>
+        <translation>Aquesta configuració tindrà efecte un cop es reiniciï TOS.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1006,8 +1006,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TosCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa TosCoin un cop s&apos;ha establert connexió, però aquest proces no s&apos;ha completat encara.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the TOS network after a connection is established, but this process has not completed yet.</source>
+        <translation>La informació mostrada pot no estar al día. El teu moneder es sincronitza automàticament amb la xarxa TOS un cop s&apos;ha establert connexió, però aquest proces no s&apos;ha completat encara.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1060,8 +1060,8 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start TosCoin: click-to-pay handler</source>
-        <translation>No es pot iniciar TosCoin: manejador clicla-per-pagar</translation>
+        <source>Cannot start TOS: click-to-pay handler</source>
+        <translation>No es pot iniciar TOS: manejador clicla-per-pagar</translation>
     </message>
 </context>
 <context>
@@ -1210,8 +1210,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the TosCoin-Qt help message to get a list with possible TosCoin command-line options.</source>
-        <translation>Mostrar el missatge d&apos;ajuda de TosCoin-Qt per a obtenir un llistat de possibles ordres per a la línia d&apos;ordres de TosCoin.</translation>
+        <source>Show the TOS-Qt help message to get a list with possible TOS command-line options.</source>
+        <translation>Mostrar el missatge d&apos;ajuda de TOS-Qt per a obtenir un llistat de possibles ordres per a la línia d&apos;ordres de TOS.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1230,13 +1230,13 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>TosCoin - Debug window</source>
-        <translation>TosCoin -Finestra de debug</translation>
+        <source>TOS - Debug window</source>
+        <translation>TOS -Finestra de debug</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>TosCoin Core</source>
-        <translation>Nucli de TosCoin</translation>
+        <source>TOS Core</source>
+        <translation>Nucli de TOS</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1245,8 +1245,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the TosCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Obrir el dietari de debug de TosCoin del directori de dades actual. Aixó pot trigar uns quants segons per a dietàris grossos.</translation>
+        <source>Open the TOS debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Obrir el dietari de debug de TOS del directori de dades actual. Aixó pot trigar uns quants segons per a dietàris grossos.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1255,8 +1255,8 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the TosCoin RPC console.</source>
-        <translation>Benvingut a la consola RPC de TosCoin</translation>
+        <source>Welcome to the TOS RPC console.</source>
+        <translation>Benvingut a la consola RPC de TOS</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1439,8 +1439,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a TosCoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Introdueixi una adreça de TosCoin (per exemple Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a TOS address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Introdueixi una adreça de TOS (per exemple Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
 </context>
 <context>
@@ -1504,8 +1504,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this TosCoin address</source>
-        <translation>Signa el missatge per provar que ets propietari d&apos;aquesta adreça TosCoin</translation>
+        <source>Sign the message to prove you own this TOS address</source>
+        <translation>Signa el missatge per provar que ets propietari d&apos;aquesta adreça TOS</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1540,8 +1540,8 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified TosCoin address</source>
-        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça TosCoin específica</translation>
+        <source>Verify the message to ensure it was signed with the specified TOS address</source>
+        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça TOS específica</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1556,8 +1556,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a TosCoin address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
-        <translation>Introdueixi una adreça de TosCoin (per exemple Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
+        <source>Enter a TOS address (e.g. Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</source>
+        <translation>Introdueixi una adreça de TOS (per exemple Ler4HNAEfwYhBmGXcFP2Po1NpRUEiK8km2)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1566,8 +1566,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter TosCoin signature</source>
-        <translation>Introduïr una clau TosCoin</translation>
+        <source>Enter TOS signature</source>
+        <translation>Introduïr una clau TOS</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1640,7 +1640,7 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The TosCoin developers</source>
+        <source>The T.OS Deveopers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2178,8 +2178,8 @@ Address: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>TosCoin version</source>
-        <translation>Versió de TosCoin</translation>
+        <source>TOS version</source>
+        <translation>Versió de TOS</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2188,8 +2188,8 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or TosCoind</source>
-        <translation>Enviar comanda a -servidor o TosCoind</translation>
+        <source>Send command to -server or TOSd</source>
+        <translation>Enviar comanda a -servidor o TOSd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2208,13 +2208,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: TosCoin.conf)</source>
-        <translation>Especificat arxiu de configuració (per defecte: TosCoin.conf)</translation>
+        <source>Specify configuration file (default: TOS.conf)</source>
+        <translation>Especificat arxiu de configuració (per defecte: TOS.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: TosCoind.pid)</source>
-        <translation>Especificar arxiu pid (per defecte: TosCoind.pid)</translation>
+        <source>Specify pid file (default: TOSd.pid)</source>
+        <translation>Especificar arxiu pid (per defecte: TOSd.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2291,15 +2291,15 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=TosCoinrpc
+rpcuser=TOSrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;TOS Alert&quot; admin@foo.com
 </source>
-        <translation>%s has de establir una contrasenya RPC a l&apos;arxiu de configuració:\n%s\nEs recomana que useu la següent constrasenya aleatòria:\nrpcuser=TosCoinrpc\nrpcpassword=%s\n(no necesiteu recordar aquesta contrsenya)\nEl nom d&apos;usuari i contrasenya NO HAN de ser els mateixos.\nSi l&apos;arxiu no existeix, crea&apos;l amb els permisos d&apos;arxiu de només lectura per al propietari.\nTambé es recomana establir la notificació d&apos;alertes i així seràs notificat de les incidències;\nper exemple: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.com</translation>
+        <translation>%s has de establir una contrasenya RPC a l&apos;arxiu de configuració:\n%s\nEs recomana que useu la següent constrasenya aleatòria:\nrpcuser=TOSrpc\nrpcpassword=%s\n(no necesiteu recordar aquesta contrsenya)\nEl nom d&apos;usuari i contrasenya NO HAN de ser els mateixos.\nSi l&apos;arxiu no existeix, crea&apos;l amb els permisos d&apos;arxiu de només lectura per al propietari.\nTambé es recomana establir la notificació d&apos;alertes i així seràs notificat de les incidències;\nper exemple: alertnotify=echo %%s | mail -s &quot;TOS Alert&quot; admin@foo.com</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -2313,8 +2313,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. TosCoin is probably already running.</source>
-        <translation>No es pot bloquejar el directori de dades %s. Probablement TosCoin ja estigui en execució.</translation>
+        <source>Cannot obtain a lock on data directory %s. T.OS Core is probably already running.</source>
+        <translation>No es pot bloquejar el directori de dades %s. Probablement TOS ja estigui en execució.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2358,8 +2358,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong TosCoin will not work properly.</source>
-        <translation>Advertència: Si us plau comprovi que la data i hora del seu computador siguin correctes! Si el seu rellotge està mal configurat, TosCoin no funcionará de manera apropiada.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong TOS will not work properly.</source>
+        <translation>Advertència: Si us plau comprovi que la data i hora del seu computador siguin correctes! Si el seu rellotge està mal configurat, TOS no funcionará de manera apropiada.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2608,8 +2608,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the TosCoin Wiki for SSL setup instructions)</source>
-        <translation>Opcions SSL: (veure la Wiki de TosCoin per a instruccions de configuració SSL)</translation>
+        <source>SSL options: (see the TOS Wiki for SSL setup instructions)</source>
+        <translation>Opcions SSL: (veure la Wiki de TOS per a instruccions de configuració SSL)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2798,13 +2798,13 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of TosCoin</source>
-        <translation>Error carregant wallet.dat: El moneder requereix una versió de TosCoin més moderna</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of TOS</source>
+        <translation>Error carregant wallet.dat: El moneder requereix una versió de TOS més moderna</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart TosCoin to complete</source>
-        <translation>El moneder necesita ser re-escrit: re-inicia TosCoin per a completar la tasca</translation>
+        <source>Wallet needed to be rewritten: restart TOS to complete</source>
+        <translation>El moneder necesita ser re-escrit: re-inicia TOS per a completar la tasca</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2863,8 +2863,8 @@ for example: alertnotify=echo %%s | mail -s &quot;TosCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. TosCoin is probably already running.</source>
-        <translation>Impossible d&apos;unir %s en aquest ordinador. Probablement TosCoin ja estigui en execució.</translation>
+        <source>Unable to bind to %s on this computer. T.OS Core is probably already running.</source>
+        <translation>Impossible d&apos;unir %s en aquest ordinador. Probablement TOS ja estigui en execució.</translation>
     </message>
     <message>
         <location line="+64"/>
