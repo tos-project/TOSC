@@ -1,9 +1,9 @@
-Building TosCoin
+Building T.OS
 
-See doc/readme-qt.rst for instructions on building TosCoin-Qt,
+See doc/readme-qt.rst for instructions on building TOS-Qt,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of TosCoin.
+implementation of TOS.
 
-See doc/build-*.txt for instructions on building TosCoind,
+See doc/build-*.txt for instructions on building TOSd,
 the intended-for-services, no-graphical-interface, reference
-implementation of TosCoin.
+implementation of TOS.
