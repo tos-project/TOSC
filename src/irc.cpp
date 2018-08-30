@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 The Bitcoin developers
-// Copyright (c) 2011-2012 TosCoin Developers
+// Copyright (c) 2017-2018 T.OS Developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -190,7 +190,7 @@ bool GetIPFromIRC(SOCKET hSocket, string strMyName, CNetAddr& ipRet)
 void ThreadIRCSeed()
 {
     // Make this thread recognisable as the IRC seeding thread
-    RenameThread("TosCoin-ircseed");
+    RenameThread("TOS-ircseed");
 
     try
     {
@@ -301,16 +301,16 @@ void ThreadIRCSeed2()
         }
         
         if (fTestNet) {
-            Send(hSocket, "JOIN #TosCoinTEST0\r");
-            Send(hSocket, "WHO #TosCoinTEST0\r");
+            Send(hSocket, "JOIN #TOSTEST0\r");
+            Send(hSocket, "WHO #TOSTEST0\r");
         } else {
-            // randomly join #TosCoin00-#TosCoin99
+            // randomly join #TOS00-#TOS99
             // network is now over 3k peers , get them to join 50 random channels!
             //            channel_number = 0; 
             int channel_number = 0; //GetRandInt(50);
 
-            Send(hSocket, strprintf("JOIN #TosCoin%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #TosCoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("JOIN #TOS%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #TOS%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();
