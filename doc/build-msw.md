@@ -1,11 +1,11 @@
-Copyright (c) 2009-2013 Toscoin Developers
+Copyright (c) 2017-2018 T.OS Developers
 Distributed under the MIT/X11 software license, see the accompanying
 file COPYING or http://www.opensource.org/licenses/mit-license.php.
 This product includes software developed by the OpenSSL Project for use in the [OpenSSL Toolkit](http://www.openssl.org/). This product includes
 cryptographic software written by Eric Young ([eay@cryptsoft.com](mailto:eay@cryptsoft.com)), and UPnP software written by Thomas Bernard.
 
 
-See readme-qt.rst for instructions on building TosCoin-Qt, the
+See readme-qt.rst for instructions on building TOS-Qt, the
 graphical user interface.
 
 WINDOWS BUILD NOTES
@@ -122,22 +122,22 @@ modify in Makefile.mingw
     upnpc-shared:    dll/upnpc.o miniupnpc.lib
     	$(CC) -Wl,-enable-stdcall-fixup -o $@ $^ $(LDLIBS)
 
-TosCoin
+T.OS
 -------
 DOS prompt:
 
-	cd \TosCoin
+	cd \TOS
 	qmake "USE_UPNP=1" coin-qt.pro
 	mingw32-make -f Makefile.Release
 
-T.osCoin in release directory
+TOS in release directory
 
-TosCoin - Debug
+T.OS - Debug
 -------
 DOS prompt:
 
-	cd \TosCoin
+	cd \TOS
 	qmake "USE_UPNP=1" coin-qt.pro
 	mingw32-make -f Makefile.Debug
 
-T.osCoin-debug in debug directory
+TOS-debug in debug directory

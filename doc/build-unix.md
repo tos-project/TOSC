@@ -12,9 +12,9 @@ To Build
 ---------------------
 
 	cd src/
-	make -f makefile.unix		# Headless TosCoin
+	make -f makefile.unix		# Headless TOS
 
-See readme-qt.rst for instructions on building TosCoin-Qt, the graphical user interface.
+See readme-qt.rst for instructions on building TOS-Qt, the graphical user interface.
 
 Dependencies
 ---------------------
@@ -102,8 +102,6 @@ If you need to build Boost yourself:
 Level DB
 --------
 	cd src/
-	rm -rf leveldb
-	cp -r leveldb-lin/ leveldb
 	chmod -R 755 *
 	cd leveldb
 	make clean
@@ -116,7 +114,7 @@ Level DB
 
 Security
 --------
-To help make your TosCoin installation more secure by making certain attacks impossible to
+To help make your TOS installation more secure by making certain attacks impossible to
 exploit even if a vulnerability is found, you can take the following measures:
 
 * Position Independent Executable
@@ -134,7 +132,7 @@ exploit even if a vulnerability is found, you can take the following measures:
 
     To test that you have built PIE executable, install scanelf, part of paxutils, and use:
 
-    	scanelf -e ./TosCoin
+    	scanelf -e ./TOS
 
     The output should contain:
      TYPE
@@ -148,7 +146,7 @@ exploit even if a vulnerability is found, you can take the following measures:
     executable without the non-executable stack protection.
 
     To verify that the stack is non-executable after compiling use:
-    `scanelf -e ./TosCoin`
+    `scanelf -e ./TOS`
 
     the output should contain:
 	STK/REL/PTL

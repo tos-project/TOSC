@@ -1,4 +1,4 @@
-Mac OS X TosCoind build instructions
+Mac OS X TOSd build instructions
 ====================================
 
 Authors
@@ -26,7 +26,7 @@ Eric Young (eay@cryptsoft.com) and UPnP software written by Thomas Bernard.
 Notes
 -----
 
-See `doc/readme-qt.rst` for instructions on building TosCoin-Qt, the
+See `doc/readme-qt.rst` for instructions on building TOS-Qt, the
 graphical user interface.
 
 Tested on OS X 10.5 through 10.8 on Intel processors only. PPC is not
@@ -72,14 +72,14 @@ Installing the dependencies using MacPorts is very straightforward.
 
     sudo port install boost db48@+no_java openssl miniupnpc
 
-### Building `TosCoind`
+### Building `TOSd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:TosCoin-project/TosCoin.git TosCoin
-        cd TosCoin
+        git clone git@github.com:TOS-project/TOS.git TOS
+        cd TOS
 
-2.  Build TosCoind:
+2.  Build TOSd:
 
         cd src
         make -f makefile.osx
@@ -97,7 +97,7 @@ You may find it easier to add the following steps to your process.  Since QT 4.8
 
       brew install qt
       
-Once you have QT installed, you might need to relink the new applications so that they appear in your Application folder, but this is unnecessary for compiling TosCoin.  Now move on to installing the rest of the dependencies.
+Once you have QT installed, you might need to relink the new applications so that they appear in your Application folder, but this is unnecessary for compiling TOS.  Now move on to installing the rest of the dependencies.
 
 #### Install dependencies using Homebrew
 
@@ -115,12 +115,12 @@ If not, you can ensure that the Brew OpenSSL is correctly linked by running
 
 Rerunning "openssl version" should now return the correct version.
 
-### Building `TosCoind`
+### Building `TOSd`
 
 1. Clone the github tree to get the source code and go into the directory.
 
-        git clone git@github.com:TosCoin-project/TosCoin.git TosCoin
-        cd TosCoin
+        git clone git@github.com:TOS-project/TOS.git TOS
+        cd TOS
 
 2.  Modify source in order to pick up the `openssl` library.
 
@@ -130,11 +130,11 @@ Rerunning "openssl version" should now return the correct version.
 
         patch -p1 < contrib/homebrew/makefile.osx.patch
 
-*Update*: The above #2 step has been rebuilt here. Now before you proceed to building TosCoind it is coing to be necessary to edit both the makefile and the TosCoin-qt.pro file.  You can find those edits in /contrib/homebrew/
+*Update*: The above #2 step has been rebuilt here. Now before you proceed to building TOSd it is coing to be necessary to edit both the makefile and the TOS-qt.pro file.  You can find those edits in /contrib/homebrew/
 
 What you doing is fixing the locations of openssl, boost, and berkeley-db4 to the correct locations that homebrew installs.
 
-3.  Build TosCoind:
+3.  Build TOSd:
 
         cd src
         make -f makefile.osx
@@ -146,8 +146,8 @@ What you doing is fixing the locations of openssl, boost, and berkeley-db4 to th
 Creating a release build
 ------------------------
 
-A TosCoind binary is not included in the TosCoin-Qt.app bundle. You can ignore
-this section if you are building `TosCoind` for your own use.
+A TOSd binary is not included in the TOS-Qt.app bundle. You can ignore
+this section if you are building `TOSd` for your own use.
 
 If you are building `litecond` for others, your build machine should be set up
 as follows for maximum compatibility:
@@ -168,10 +168,10 @@ As of December 2012, the `boost` port does not obey `macosx_deployment_target`.
 Download `http://gavinandresen-bitcoin.s3.amazonaws.com/boost_macports_fix.zip`
 for a fix. Some ports also seem to obey either `build_arch` or
 `macosx_deployment_target`, but not both at the same time. For example, building
-on an OS X 10.6 64-bit machine fails. Official release builds of TosCoin-Qt are
+on an OS X 10.6 64-bit machine fails. Official release builds of TOS-Qt are
 compiled on an OS X 10.6 32-bit machine to workaround that problem.
 
-Once dependencies are compiled, creating `TosCoin-Qt.app` is easy:
+Once dependencies are compiled, creating `TOS-Qt.app` is easy:
 
     make -f Makefile.osx RELEASE=1
 
@@ -191,20 +191,20 @@ This will make the QT version of the wallet WITHOUT having to use QT Creator (si
 Running
 -------
 
-It's now available at `./TosCoind`, provided that you are still in the `src`
+It's now available at `./TOSd`, provided that you are still in the `src`
 directory. We have to first create the RPC configuration file, though.
 
-Run `./TosCoind` to get the filename where it should be put, or just try these
+Run `./TOSd` to get the filename where it should be put, or just try these
 commands:
 
-    echo -e "rpcuser=TosCoinrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/TosCoin/TosCoin.conf"
-    chmod 600 "/Users/${USER}/Library/Application Support/TosCoin/TosCoin.conf"
+    echo -e "rpcuser=TOSrpc\nrpcpassword=$(xxd -l 16 -p /dev/urandom)" > "/Users/${USER}/Library/Application Support/TOS/TOS.conf"
+    chmod 600 "/Users/${USER}/Library/Application Support/TOS/TOS.conf"
 
 When next you run it, it will start downloading the blockchain, but it won't
 output anything while it's doing this. This process may take several hours.
 
 Other commands:
 
-    ./TosCoind --help  # for a list of command-line options.
-    ./TosCoind -daemon # to start the TosCoin daemon.
-    ./TosCoind help    # When the daemon is running, to get a list of RPC commands
+    ./TOSd --help  # for a list of command-line options.
+    ./TOSd -daemon # to start the TOS daemon.
+    ./TOSd help    # When the daemon is running, to get a list of RPC commands
