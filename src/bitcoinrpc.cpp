@@ -183,10 +183,10 @@ Value stop(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "Stop TosCoin server.");
+            "Stop TOS server.");
     // Shutdown will take long enough that the response should get back
     StartShutdown();
-    return "TosCoin server stopping";
+    return "TOS server stopping";
 }
 
 
@@ -299,7 +299,7 @@ string HTTPPost(const string& strMsg, const map<string,string>& mapRequestHeader
 {
     ostringstream s;
     s << "POST / HTTP/1.1\r\n"
-      << "User-Agent: TosCoin-json-rpc/" << FormatFullVersion() << "\r\n"
+      << "User-Agent: TOS-json-rpc/" << FormatFullVersion() << "\r\n"
       << "Host: 127.0.0.1\r\n"
       << "Content-Type: application/json\r\n"
       << "Content-Length: " << strMsg.size() << "\r\n"
@@ -330,7 +330,7 @@ static string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
     if (nStatus == HTTP_UNAUTHORIZED)
         return strprintf("HTTP/1.0 401 Authorization Required\r\n"
             "Date: %s\r\n"
-            "Server: TosCoin-json-rpc/%s\r\n"
+            "Server: TOS-json-rpc/%s\r\n"
             "WWW-Authenticate: Basic realm=\"jsonrpc\"\r\n"
             "Content-Type: text/html\r\n"
             "Content-Length: 296\r\n"
@@ -355,9 +355,9 @@ static string HTTPReply(int nStatus, const string& strMsg, bool keepalive)
             "HTTP/1.1 %d %s\r\n"
             "Date: %s\r\n"
             "Connection: %s\r\n"
-            "Content-Length: %"PRIszu"\r\n"
+            "Content-Length: %" PRIszu "\r\n"
             "Content-Type: application/json\r\n"
-            "Server: TosCoin-json-rpc/%s\r\n"
+            "Server: TOS-json-rpc/%s\r\n"
             "\r\n"
             "%s",
         nStatus,
@@ -661,71 +661,66 @@ private:
 void ServiceConnection(AcceptedConnection *conn);
 
 // Forward declaration required for RPCListen
-template <typename Protocol, typename SocketAcceptorService>
-static void RPCAcceptHandler(boost::shared_ptr< basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor,
+template <typename Protocol>
+static void RPCAcceptHandler(boost::shared_ptr< basic_socket_acceptor<Protocol> > acceptor,
                              ssl::context& context,
                              bool fUseSSL,
-                             AcceptedConnection* conn,
+                             boost::shared_ptr<AcceptedConnection> conn,
                              const boost::system::error_code& error);
 
 /**
  * Sets up I/O resources to accept and handle a new connection.
  */
-template <typename Protocol, typename SocketAcceptorService>
-static void RPCListen(boost::shared_ptr< basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor,
-                   ssl::context& context,
-                   const bool fUseSSL)
+template <typename Protocol>
+static void RPCListen(boost::shared_ptr< basic_socket_acceptor<Protocol> > acceptor,
+                    ssl::context& context,
+                    const bool fUseSSL)
 {
     // Accept connection
-    AcceptedConnectionImpl<Protocol>* conn = new AcceptedConnectionImpl<Protocol>(acceptor->get_io_service(), context, fUseSSL);
+    boost::shared_ptr<AcceptedConnectionImpl<Protocol> > conn(new AcceptedConnectionImpl<Protocol>(acceptor->get_io_service(), context, fUseSSL));
 
     acceptor->async_accept(
-            conn->sslStream.lowest_layer(),
-            conn->peer,
-            boost::bind(&RPCAcceptHandler<Protocol, SocketAcceptorService>,
-                acceptor,
-                boost::ref(context),
-                fUseSSL,
-                conn,
-                boost::asio::placeholders::error));
+        conn->sslStream.lowest_layer(),
+        conn->peer,
+        boost::bind(&RPCAcceptHandler<Protocol>,
+            acceptor,
+            boost::ref(context),
+            fUseSSL,
+            conn,
+            _1));
 }
 
 /**
  * Accept and handle incoming connection.
  */
-template <typename Protocol, typename SocketAcceptorService>
-static void RPCAcceptHandler(boost::shared_ptr< basic_socket_acceptor<Protocol, SocketAcceptorService> > acceptor,
+template <typename Protocol>
+static void RPCAcceptHandler(boost::shared_ptr< basic_socket_acceptor<Protocol> > acceptor,
                              ssl::context& context,
                              const bool fUseSSL,
-                             AcceptedConnection* conn,
+                             boost::shared_ptr<AcceptedConnection> conn,
                              const boost::system::error_code& error)
 {
     // Immediately start accepting new connections, except when we're cancelled or our socket is closed.
     if (error != asio::error::operation_aborted && acceptor->is_open())
         RPCListen(acceptor, context, fUseSSL);
 
-    AcceptedConnectionImpl<ip::tcp>* tcp_conn = dynamic_cast< AcceptedConnectionImpl<ip::tcp>* >(conn);
+    AcceptedConnectionImpl<ip::tcp>* tcp_conn = dynamic_cast<AcceptedConnectionImpl<ip::tcp>*>(conn.get());
 
-    // TODO: Actually handle errors
-    if (error)
-    {
-        delete conn;
+    if (error) {
+        // TODO: Actually handle errors
+        //delete conn;
     }
-
     // Restrict callers by IP.  It is important to
     // do this before starting client thread, to filter out
     // certain DoS and misbehaving clients.
-    else if (tcp_conn && !ClientAllowed(tcp_conn->peer.address()))
-    {
+    else if (tcp_conn && !ClientAllowed(tcp_conn->peer.address())) {
         // Only send a 403 if we're not using SSL to prevent a DoS during the SSL handshake.
         if (!fUseSSL)
             conn->stream() << HTTPReply(HTTP_FORBIDDEN, "", false) << std::flush;
-        delete conn;
-    }
-    else {
-        ServiceConnection(conn);
         conn->close();
-        delete conn;
+    } else {
+        ServiceConnection(conn.get());
+        conn->close();
     }
 }
 
@@ -737,7 +732,7 @@ void StartRPCThreads()
     {
         unsigned char rand_pwd[32];
         RAND_bytes(rand_pwd, 32);
-        string strWhatAmI = "To use TosCoind";
+        string strWhatAmI = "To use TOSd";
         if (mapArgs.count("-server"))
             strWhatAmI = strprintf(_("To use the %s option"), "\"-server\"");
         else if (mapArgs.count("-daemon"))
@@ -746,13 +741,13 @@ void StartRPCThreads()
             _("%s, you must set a rpcpassword in the configuration file:\n"
               "%s\n"
               "It is recommended you use the following random password:\n"
-              "rpcuser=TosCoinrpc\n"
+              "rpcuser=TOSrpc\n"
               "rpcpassword=%s\n"
               "(you do not need to remember this password)\n"
               "The username and password MUST NOT be the same.\n"
               "If the file does not exist, create it with owner-readable-only file permissions.\n"
               "It is also recommended to set alertnotify so you are notified of problems;\n"
-              "for example: alertnotify=echo %%s | mail -s \"TosCoin Alert\" admin@foo.com\n"),
+              "for example: alertnotify=echo %%s | mail -s \"TOS Alert\" admin@foo.com\n"),
                 strWhatAmI.c_str(),
                 GetConfigFile().string().c_str(),
                 EncodeBase58(&rand_pwd[0],&rand_pwd[0]+32).c_str()),
@@ -763,7 +758,7 @@ void StartRPCThreads()
 
     assert(rpc_io_service == NULL);
     rpc_io_service = new asio::io_service();
-    rpc_ssl_context = new ssl::context(*rpc_io_service, ssl::context::sslv23);
+    rpc_ssl_context = new ssl::context(ssl::context::sslv23);
 
     const bool fUseSSL = GetBoolArg("-rpcssl");
 
@@ -782,7 +777,7 @@ void StartRPCThreads()
         else printf("ThreadRPCServer ERROR: missing server private key file %s\n", pathPKFile.string().c_str());
 
         string strCiphers = GetArg("-rpcsslciphers", "TLSv1+HIGH:!SSLv2:!aNULL:!eNULL:!AH:!3DES:@STRENGTH");
-        SSL_CTX_set_cipher_list(rpc_ssl_context->impl(), strCiphers.c_str());
+        SSL_CTX_set_cipher_list(rpc_ssl_context->native_handle(), strCiphers.c_str());
     }
 
     // Try a dual IPv6/IPv4 socket, falling back to separate IPv4 and IPv6 sockets
@@ -1065,7 +1060,7 @@ Object CallRPC(const string& strMethod, const Array& params)
     // Connect to localhost
     bool fUseSSL = GetBoolArg("-rpcssl");
     asio::io_service io_service;
-    ssl::context context(io_service, ssl::context::sslv23);
+    ssl::context context(ssl::context::sslv23);
     context.set_options(ssl::context::no_sslv2);
     asio::ssl::stream<asio::ip::tcp::socket> sslStream(io_service, context);
     SSLIOStreamDevice<asio::ip::tcp> d(sslStream, fUseSSL);
