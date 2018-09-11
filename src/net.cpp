@@ -1208,6 +1208,8 @@ static const char *strMainNetDNSSeed[][2] = {
 
 static const char *strTestNetDNSSeed[][2] = {
 	{"tosblock.com","testnet-dnsseed.tosblock.com"},
+    {"tosblock.com","testnet-dnsseed2.tosblock.com"},
+    {"tosblock.com","testnet-dnsseed3.tosblock.com"},
     {NULL, NULL}
 };
 
