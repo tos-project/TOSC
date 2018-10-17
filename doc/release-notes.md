@@ -98,7 +98,7 @@ For more information, see: <https://github.com/bitcoin/bitcoin/pull/6917>
 Other fixes for database corruption on Windows are expected in the
 next major release.
 
-0.10.4 Change log
+2.0.1 Change log
 =================
 This release is based upon Bitcoin Core v0.10.4.  
 
