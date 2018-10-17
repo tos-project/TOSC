@@ -100,23 +100,7 @@ next major release.
 
 0.10.4 Change log
 =================
-
-This release is based upon Bitcoin Core v0.10.4.  Their upstream changelog applies to us and
-is included in as separate release-notes, see: [Release Notes](release-notes.md).  
-This section describes the TOSC-specific differences.
+This release is based upon Bitcoin Core v0.10.4.  
 
 - Added BIP65 CHECKLOCKTIMEVERIFY softfork.
 - Increased OP_RETURN relay size to 80 bytes.
-
-Credits
-=======
-
-Thanks to everyone who directly contributed to this release:
-
-- Charles Lee
-- pooler
-- Adrian Gallagher
-- Anton Yemelyanov
-- Warren Togami
-- BtcDrak
-
