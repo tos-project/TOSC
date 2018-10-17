@@ -4,16 +4,16 @@ TOSC Core integration/staging tree
 https://www.tosblock.com
 
 What is TOSC?
-----------------
+---------------------
 
-TOSC is an experimental new digital currency that enables instant payments to
-anyone, anywhere in the world. TOSC uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. TOSC Core is the name of open source
-software which enables the use of this currency.
+TOSC is a kind of digital coin which has been based on block-chain technology and aiming the new payment market by digital(virtual) currency system.
 
-For more information, as well as an immediately useable, binary version of
-the TOSC Core software, see https://tosc.org
+Many types of digital coin have issued world-widely in recent years, however any digital coins have not been practical for economical or financial usage but booming up only on dealing themselves by each other, that means the values of almost coins are ‘just possession’ such as old stamps, antique or jewelry. It’s non-sense!
+
+Because we would be faced with emerging cashless world before long, we have prepared to create the new digital currency which should be safer, swifter and smarter in paying process on real commercial market. 
+TOSC could substitute intelligent paying method for cash, plastic card (credit / debit) and all the other pay-system, so would pursue the lower paying-cost (commission) and shorter term for paying the money to affiliated store, it might be a win-win model between the customers and the affiliated store owners. That’s enough!
+
+Visit https://www.tosblock.com for further information about the TOSC.
 
 License
 -------
@@ -21,27 +21,10 @@ License
 TOSC Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
 information or see http://opensource.org/licenses/MIT.
 
-Development process
--------------------
+Development Process
+---------------------
 
-Developers work in their own trees, then submit pull requests when they think
-their feature or bug fix is ready.
-
-If it is a simple/trivial/non-controversial change, then one of the TOSC
-development team members simply pulls it.
-
-If it is a *more complicated or potentially controversial* change, then the patch
-submitter will be asked to start a discussion (if they haven't already) on the
-[mailing list](https://groups.google.com/forum/#!forum/tosc-dev).
-
-The patch will be accepted if there is broad consensus that it is a good thing.
-Developers should expect to rework and resubmit patches if the code doesn't
-match the project's coding conventions (see [doc/coding.md](doc/coding.md)) or are
-controversial.
-
-The `master-0.10` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/tosc-project/tosc/tags) are created
-regularly to indicate new official, stable release versions of TOSC.
+The master branch is regularly built and tested, but is not guaranteed to be completely stable. Tags are created regularly to indicate new official, stable release versions of TOSC Core.
 
 Testing
 -------
@@ -50,14 +33,6 @@ Testing and code review is the bottleneck for development; we get more pull
 requests than we can review and test on short notice. Please be patient and help out by testing
 other people's pull requests, and remember this is a security-critical project where any mistake might cost people
 lots of money.
-
-### Manual Quality Assurance (QA) Testing
-
-Large changes should have a test plan, and should be tested by somebody other
-than the developer who wrote the code.
-Creating a thread in the [TOSC discussion forum](https://tosctalk.org/index.php?board=2.0) will allow the TOSC
-development team members to review your proposal and to provide assistance with creating a test plan. 
-
 
 Translations
 ------------

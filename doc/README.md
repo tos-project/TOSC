@@ -3,7 +3,7 @@ TOSC Core 2.0.1
 
 Setup
 ---------------------
-[TOSC Core](http://tosc.org/en/download) is the original TOSC client and it builds the backbone of the network. However, it downloads and stores the entire history of TOSC transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once. If you would like the process to go faster you can [download the blockchain directly](bootstrap.md).
+[TOSC Core](http://www.tosblock.com) is the original TOSC client and it builds the backbone of the network. However, it downloads and stores the entire history of TOSC transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more. Thankfully you only have to do this once. If you would like the process to go faster you can [download the blockchain directly](bootstrap.md).
 
 Running
 ---------------------
