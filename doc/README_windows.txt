@@ -1,4 +1,4 @@
-Bitcoin Core 0.10.4
+TOSC Core 2.0.1
 =====================
 
 Intro
