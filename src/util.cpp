@@ -384,11 +384,11 @@ boost::filesystem::path GetDefaultDataDir()
     namespace fs = boost::filesystem;
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\TOSC
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\TOSC
-    // Mac: ~/Library/Application Support/TOSC
+    // Mac: ~/Library/Application Support/TosCoin
     // Unix: ~/.tosc
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "TOSC";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "TosCoin";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -400,10 +400,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "TOSC";
+    return pathRet / "TosCoin";
 #else
     // Unix
-    return pathRet / ".tosc";
+    return pathRet / ".TosCoin";
 #endif
 #endif
 }
@@ -450,7 +450,7 @@ void ClearDatadirCache()
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "tosc.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "TosCoin.conf"));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
@@ -462,14 +462,14 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 {
     boost::filesystem::ifstream streamConfig(GetConfigFile());
     if (!streamConfig.good())
-        return; // No tosc.conf file is OK
+        return; // No TosCoin.conf file is OK
 
     set<string> setOptions;
     setOptions.insert("*");
 
     for (boost::program_options::detail::config_file_iterator it(streamConfig, setOptions), end; it != end; ++it)
     {
-        // Don't overwrite existing settings so command line settings override tosc.conf
+        // Don't overwrite existing settings so command line settings override TosCoin.conf
         string strKey = string("-") + it->string_key;
         if (mapSettingsRet.count(strKey) == 0)
         {
