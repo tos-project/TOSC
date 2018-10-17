@@ -1,9 +1,5 @@
-Building T.OS
+Building Bitcoin
 
-See doc/readme-qt.rst for instructions on building TOS-Qt,
-the intended-for-end-users, nice-graphical-interface, reference
-implementation of TOS.
-
-See doc/build-*.txt for instructions on building TOSd,
+See doc/build-*.md for instructions on building bitcoind,
 the intended-for-services, no-graphical-interface, reference
-implementation of TOS.
+implementation of Bitcoin.
