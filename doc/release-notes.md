@@ -1,78 +1,106 @@
-1.1.0 changes
-=============
+TOSC Core version 2.0.1 :
 
-- Coin Control - experts only GUI selection of inputs before you send a transaction
+This is a new minor version release, bringing bug fixes, the BIP65
+(CLTV) consensus change, and relay policy preparation for BIP113. It is
+recommended to upgrade to this version as soon as possible.
 
-- Disable Wallet - reduces memory requirements, helpful for miner or relay nodes
+Please report bugs using the issue tracker at github:
 
-- 20x reduction in default mintxfee.
+  <https://github.com/tos-project/TOSC/issues>
 
-- Up to 50% faster PoW validation, faster sync and reindexing.
+Upgrading and downgrading
+=========================
 
-- Peers older than protocol version 70002 are disconnected.  0.8.3.7 is the oldest compatible client.
+How to Upgrade
+--------------
 
-- Internal miner added back to TOS.  setgenerate now works, although it is generally a bad idea as it is significantly slower than external CPU miners.
+If you are running an older version, shut it down. Wait until it has completely
+shut down (which might take a few minutes for older versions), then run the
+installer (on Windows) or just copy over /Applications/TOSC-Qt (on Mac) or
+toscd/tosc-qt (on Linux).
 
-- New RPC commands: getbestblockhash and verifychain
+Downgrade warning
+------------------
 
-- Improve fairness of the high priority transaction space per block
+Because release 0.10+ and later makes use of headers-first synchronization and
+parallel block download (see further), the block files and databases are not
+backwards-compatible with pre-0.10 versions of TOSC Core or other software:
 
-- OSX block chain database corruption fixes
-  - Update leveldb to 1.13
-  - Use fcntl with `F_FULLSYNC` instead of fsync on OSX
-  - Use native Darwin memory barriers
-  - Replace use of mmap in leveldb for improved reliability (only on OSX)
+* Blocks will be stored on disk out of order (in the order they are
+received, really), which makes it incompatible with some tools or
+other programs. Reindexing using earlier versions will also not work
+anymore as a result of this.
 
-- Fix nodes forwarding transactions with empty vins and getting banned
+* The block index database will now hold headers for which no block is
+stored on disk, which earlier versions won't support.
 
-- Network code performance and robustness improvements
+If you want to be able to downgrade smoothly, make a backup of your entire data
+directory. Without this your node will need start syncing (or importing from
+bootstrap.dat) anew afterwards. It is possible that the data from a completely
+synchronised 0.10 node may be usable in older versions as-is, but this is not
+supported and may break as soon as the older version attempts to reindex.
 
-- Additional debug.log logging for diagnosis of network problems, log timestamps by default
+This does not affect wallet forward or backward compatibility.
 
-- Fix rare GUI crash on send
+Notable changes since 1.1.0
+============================
 
-0.8.5.1 changes
-===============
+BIP65 soft fork to enforce OP_CHECKLOCKTIMEVERIFY opcode
+--------------------------------------------------------
 
-Workaround negative version numbers serialization bug.
+This release includes several changes related to the [BIP65][] soft fork
+which redefines the existing OP_NOP2 opcode as OP_CHECKLOCKTIMEVERIFY
+(CLTV) so that a transaction output can be made unspendable until a
+specified point in the future.
 
-Fix out-of-bounds check (TOS currently does not use this codepath, but we apply this
-patch just to match Bitcoin 0.8.5.)
+1. This release will only relay and mine transactions spending a CLTV
+   output if they comply with the BIP65 rules as provided in code.
 
-0.8.4.1 changes
-===============
+2. This release will produce version 4 blocks by default. Please see the
+   *notice to miners* below.
 
-CVE-2013-5700 Bloom: filter crash issue - TOS 0.8.3.7 disabled bloom by default so was 
-unaffected by this issue, but we include their patches anyway just in case folks want to 
-enable bloomfilter=1.
+3. Once 951 out of a sequence of 1,001 blocks on the local node's best block
+   chain contain version 4 (or higher) blocks, this release will no
+   longer accept new version 3 blocks and it will only accept version 4
+   blocks if they comply with the BIP65 rules for CLTV.
 
-CVE-2013-4165: RPC password timing guess vulnerability
+**Notice to miners:** TOSC Core’s block templates are now for
+version 4 blocks only, and any mining software relying on its
+getblocktemplate must be updated in parallel to use libblkmaker either
+version v0.4.3 or any version from v0.5.2 onward.
 
-CVE-2013-4627: Better fix for the fill-memory-with-orphaned-tx attack
+- If you are solo mining, this will affect you the moment you upgrade
+  TOSC Core, which must be done prior to BIP65 achieving its 951/1001
+  status.
 
-Fix multi-block reorg transaction resurrection.
+- If you are mining with the stratum mining protocol: this does not
+  affect you.
 
-Fix non-standard disconnected transactions causing mempool orphans.  This bug could cause 
-nodes running with the -debug flag to crash, although it was lot less likely on TOS 
-as we disabled IsDust() in 0.8.3.x.
+- If you are mining with the getblocktemplate protocol to a pool: this
+  will affect you at the pool operator’s discretion, which must be no
+  later than BIP65 achieving its 951/1001 status.
 
-Mac OSX: use 'FD_FULLSYNC' with LevelDB, which will (hopefully!) prevent the database 
-corruption issues have experienced on OSX.
-
-Add height parameter to getnetworkhashps.
-
-Fix Norwegian and Swedish translations.
-
-Minor efficiency improvement in block peer request handling.
+[BIP65]: https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki
 
 
-0.8.3.7 changes
-===============
+Windows bug fix for corrupted UTXO database on unclean shutdowns
+----------------------------------------------------------------
 
-Fix CVE-2013-4627 denial of service, a memory exhaustion attack that could crash low-memory nodes.
+Several Windows users reported that they often need to reindex the
+entire blockchain after an unclean shutdown of TOSC Core on Windows
+(or an unclean shutdown of Windows itself). Although unclean shutdowns
+remain unsafe, this release no longer relies on memory-mapped files for
+the UTXO database, which significantly reduced the frequency of unclean
+shutdowns leading to required reindexes during testing.
 
-Fix a regression that caused excessive writing of the peers.dat file.
+For more information, see: <https://github.com/bitcoin/bitcoin/pull/6917>
 
-Add option for bloom filtering.
+Other fixes for database corruption on Windows are expected in the
+next major release.
 
-Fix Hebrew translation.
+0.10.4 Change log
+=================
+This release is based upon Bitcoin Core v0.10.4.  
+
+- Added BIP65 CHECKLOCKTIMEVERIFY softfork.
+- Increased OP_RETURN relay size to 80 bytes.
