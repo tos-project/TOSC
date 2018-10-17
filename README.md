@@ -1,7 +1,7 @@
 TOSC Core integration/staging tree
 =====================================
 
-https://tosc.org
+https://www.tosblock.com
 
 What is TOSC?
 ----------------
