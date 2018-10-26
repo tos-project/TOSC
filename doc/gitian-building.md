@@ -281,7 +281,7 @@ Clone the git repositories for tosc and Gitian and then checkout the tosc versio
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/tosc-project/tosc.git
+git clone https://github.com/tos-project/tosc.git
 cd tosc
 git checkout v${VERSION}
 cd ..
@@ -300,7 +300,7 @@ Execute the following as user `debian`:
 
 ```bash
 cd gitian-builder
-bin/make-base-vm --lxc --arch amd64 --suite precise
+bin/make-base-vm --lxc --arch amd64 --suite trusty
 ```
 
 There will be a lot of warnings printed during build of the images. These can be ignored.
