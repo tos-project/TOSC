@@ -20,7 +20,7 @@ packages:
 - "libbz2-dev"
 reference_datetime: "2016-01-01 00:00:00"
 remotes:
-- "url": "https://github.com/tos-project/Untitled01.git"
+- "url": "https://github.com/tos-project/tosc.git"
   "dir": "tosc"
 files:
 - "MacOSX10.9.sdk.tar.gz"
