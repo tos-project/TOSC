@@ -3,6 +3,10 @@ TOSC Core integration/staging tree
 
 https://www.tosblock.com
 
+## Notice
+
+The latest version has not stabilized mining. When you mining, old versions are recommended.
+
 What is TOSC?
 ---------------------
 
